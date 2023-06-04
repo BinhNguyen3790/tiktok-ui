@@ -16,7 +16,7 @@ function Header() {
       <Tippy
         render={attrs => (
           <div className={cx("search-result")} tabIndex="-1" {...attrs}>
-            My tippy box
+            My tippy box 
           </div>
         )}
       >

@@ -1,23 +1,22 @@
 .wrapper {
-    --search-input-border: 92px;
-    --search-icon-width: 5rem;
-    height: var(--default-layout-header-height, 60px);
-    box-shadow: 0 1px 1px rgba(0,0,0,0.12);
-    display: flex;
-    justify-content: center;
+  --search-input-border: 92px;
+  --search-icon-width: 5rem;
+  height: var(--default-layout-header-height, 60px);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .inner {
+    max-width: var(--default-layout-width);
     width: 100%;
-    .inner {
-        max-width: var(--default-layout-width);
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .logo {
-
 }
 .search {
   width: 361px;
@@ -25,19 +24,19 @@
   padding-left: 16px;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(22,24,35,0.06);
+  background-color: rgba(22, 24, 35, 0.06);
   border-radius: var(--search-input-border);
   position: relative;
   border: 1.5px solid transparent;
   &:before {
-    content: "";
+    content: '';
     position: absolute;
     height: 28px;
     width: 1px;
     top: 50%;
     right: var(--search-icon-width);
     transform: translateY(-50%);
-    background-color: rgba(22,24,35,0.12);
+    background-color: rgba(22, 24, 35, 0.12);
   }
   input {
     flex: 1;
@@ -47,31 +46,35 @@
     font-size: 1.6rem;
     background-color: transparent;
     &:focus-visible {
-        outline: none;
+      outline: none;
     }
-    &:not(:placeholder-shown) ~ .search-btn{
-        color: rgba(22,24,35,0.75);
+    &:not(:placeholder-shown) ~ .search-btn {
+      color: rgba(22, 24, 35, 0.75);
     }
   }
   &:focus-within {
-    border-color:rgba(22,24,35,0.2);
+    border-color: rgba(22, 24, 35, 0.2);
   }
 }
-.clear, .loading {
+.clear,
+.loading {
   position: absolute;
   top: 50%;
   right: calc(var(--search-icon-width) + 1.6rem);
   transform: translateY(-50%);
-  color: rgba(22,24,35,0.34);
+  color: rgba(22, 24, 35, 0.34);
 }
 .search-btn {
   width: 52px;
   height: 100%;
   border-top-right-radius: var(--search-input-border);
   border-bottom-right-radius: var(--search-input-border);
-  color: rgba(22,24,35,0.34);
+  color: rgba(22, 24, 35, 0.34);
   &:hover {
-    background-color: rgba(22,24,35,0.03);
+    background-color: rgba(22, 24, 35, 0.03);
     cursor: pointer;
+  }
+  &:active {
+    background-color: rgba(22, 24, 35, 0.06);
   }
 }
