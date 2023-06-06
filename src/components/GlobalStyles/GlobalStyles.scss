@@ -1,9 +1,10 @@
-@import "normalize.css";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;900&display=swap");
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;900&display=swap');
 
 :root {
   --primary: #fe2c55;
   --black: #000000;
+  --white: #ffffff;
   --text-color: #333333;
 
   // Default layout
@@ -22,14 +23,16 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
   // line-height: 1.6rem;
   text-rendering: optimizeSpeed;
   color: var(--text-color);
 }
 
-button, input, [tabindex] {
+button,
+input,
+[tabindex] {
   outline: none;
   border: none;
 }
