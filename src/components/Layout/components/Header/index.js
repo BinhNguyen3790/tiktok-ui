@@ -4,12 +4,16 @@ import {
   faCircleQuestion,
   faCircleXmark,
   faCloudUpload,
+  faCoins,
   faEarthAsia,
   faEllipsisVertical,
+  faGear,
   faKeyboard,
   faMagnifyingGlass,
   faMessage,
+  faSignOut,
   faSpinner,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { Wrapper as PopperWrapper } from "@/components/Popper";
 import classNames from "classnames/bind";
@@ -56,6 +60,7 @@ const MENU_ITEMS = [
 
 function Header() {
   const [searchResult, setSearchResult] = useState([]);
+  const currentUser = true;
 
   useEffect(() => {
     setTimeout(() => {
@@ -72,7 +77,30 @@ function Header() {
     }
   };
 
-  const currentUser = true;
+  const userMenu = [
+    {
+      icon: <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>,
+      title: "ViewProfile",
+      to: "/@hoaa",
+    },
+    {
+      icon: <FontAwesomeIcon icon={faCoins}></FontAwesomeIcon>,
+      title: "Get coins",
+      to: "/coin",
+    },
+    {
+      icon: <FontAwesomeIcon icon={faGear}></FontAwesomeIcon>,
+      title: "Settings",
+      to: "/settings",
+    },
+    ...MENU_ITEMS,
+    {
+      icon: <FontAwesomeIcon icon={faSignOut}></FontAwesomeIcon>,
+      title: "Log out",
+      to: "/logout",
+      separate: true,
+    },
+  ];
 
   return (
     <header className={cx("wrapper")}>
@@ -108,7 +136,7 @@ function Header() {
         <div className={cx("actions")}>
           {currentUser ? (
             <>
-              <Tippy content="Upload video" placement="bottom">
+              <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                 <button className={cx("action-btn")}>
                   <FontAwesomeIcon icon={faCloudUpload} />
                 </button>
@@ -124,7 +152,7 @@ function Header() {
             </>
           )}
 
-          <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
+          <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
             {currentUser ? (
               <img src={images.userImg} className={cx("user-avatar")} alt="Nguyen Van A" />
             ) : (
