@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleQuestion,
   faCircleXmark,
-  faCloudUpload,
   faCoins,
   faEarthAsia,
   faEllipsisVertical,
@@ -25,6 +24,8 @@ import AccountItem from "@/components/AccountItem";
 import Button from "@/components/Button";
 import Menu from "@/components/Popper/Menu";
 import "tippy.js/dist/tippy.css";
+import { UploadIcon } from "@/components/Icons";
+import Image from "@/components/Images";
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -138,7 +139,8 @@ function Header() {
             <>
               <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                 <button className={cx("action-btn")}>
-                  <FontAwesomeIcon icon={faCloudUpload} />
+                  {/* <FontAwesomeIcon icon={faCloudUpload} /> */}
+                  <UploadIcon />
                 </button>
               </Tippy>
               <button className={cx("action-btn")}>
@@ -154,7 +156,7 @@ function Header() {
 
           <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
             {currentUser ? (
-              <img src={images.userImg} className={cx("user-avatar")} alt="Nguyen Van A" />
+              <Image src={images.userImg} className={cx("user-avatar")} alt="Nguyen Van A" />
             ) : (
               <button className={cx("more-btn")}>
                 <FontAwesomeIcon icon={faEllipsisVertical} />
