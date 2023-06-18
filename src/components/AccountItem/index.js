@@ -2,7 +2,7 @@ import classNames from "classnames/bind";
 import styles from "./AccountItem.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
-import images from "@/assets/images";
+// import images from "@/assets/images";
 import Image from "../Images";
 import { Link } from "react-router-dom";
 
