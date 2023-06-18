@@ -28,6 +28,7 @@
     color: var(--black);
     font-size: 1.6rem;
     background-color: transparent;
+    font-family: var(--font-family);
     &:focus-visible {
       outline: none;
     }
