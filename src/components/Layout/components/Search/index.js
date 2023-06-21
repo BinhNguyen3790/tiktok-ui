@@ -8,7 +8,7 @@ import { faCircleXmark, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Search.module.scss";
 import { SearchIcon } from "@/components/Icons";
 import { useDebounce } from "@/hooks";
-import * as searchServices from "@/apiServices/searchServices";
+import * as searchServices from "@/services/searchService";
 
 const cx = classNames.bind(styles);
 
