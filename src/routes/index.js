@@ -1,5 +1,5 @@
 // Layout
-import { HeaderOnly } from "@/components/Layout";
+import { HeaderOnly } from "@/layouts";
 import routesConfig from "@/config/routes";
 
 // Pages
