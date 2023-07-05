@@ -12,10 +12,10 @@ function AccountItem() {
   return (
     <div className={cx("account-item")}>
       <img className={cx("avatar")} src={images.userImg} alt="" />
-      <div className="item-info">
+      <div className={cx("item-info")}>
         <p className={cx("nickname")}>
           <strong>Binhdevfe</strong>
-          <FontAwesomeIcon icon={faCheckCircle} />
+          <FontAwesomeIcon className={cx("check")} icon={faCheckCircle} />
         </p>
         <p className={cx("name")}>Binhdev</p>
       </div>
