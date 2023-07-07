@@ -12,7 +12,7 @@ function AccountPreview() {
     <div className={cx("wrapper")}>
       <div className={cx("header")}>
         <img className={cx("avatar")} src={images.userImg} alt="" />
-        <Button primary>Follow</Button>
+        <Button className={cx('follow-btn')} primary>Follow</Button>
       </div>
       <div className={cx("body")}>
         <p className={cx("nickname")}>
@@ -21,9 +21,9 @@ function AccountPreview() {
         </p>
         <p className={cx("name")}>Binhdev</p>
         <p className={cx("analytics")}>
-          <strong className={cx("value")}>8.2M</strong>
+          <strong className={cx("value")}>8.2M </strong>
           <span className={cx("label")}>Followers</span>
-          <strong className={cx("value")}>8.2M</strong>
+          <strong className={cx("value")}>8.2M </strong>
           <span className={cx("label")}>Like</span>
         </p>
       </div>
